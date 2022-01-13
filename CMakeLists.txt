@@ -22,13 +22,26 @@ add_executable(
     add_binary_test
     src/add-binary.test.cc
 )
+
+add_executable(
+    two_sum_test
+    src/1-two-sum/two-sum.test.cc
+)
+
 target_link_libraries(
     add_binary_test
     PRIVATE gtest_main
 )
 
+target_link_libraries(
+    two_sum_test
+    PRIVATE gtest_main
+)
+
+
 
 gtest_discover_tests(add_binary_test)
+gtest_discover_tests(two_sum_test)
 
 
 # add_subdirectory(libs/googletest) # add googletest subdirectory

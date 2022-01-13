@@ -3,7 +3,7 @@
 #include "./add-binary.hpp"
 
 // Demonstrate some basic assertions.
-TEST(FactorialTest, BasicAssertions)
+TEST(AddBinaryTest, BasicAssertions)
 {
   Solution sol;
   // Expect two strings not to be equal.
