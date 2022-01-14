@@ -53,6 +53,7 @@ target_link_libraries(
 
 gtest_discover_tests(add_binary_test)
 gtest_discover_tests(two_sum_test)
+gtest_discover_tests(palindrome_number)
 
 
 # add_subdirectory(libs/googletest) # add googletest subdirectory
