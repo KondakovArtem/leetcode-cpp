@@ -19,14 +19,25 @@ enable_testing()
 include(GoogleTest)
 
 add_executable(
-    add_binary_test
-    src/add-binary.test.cc
-)
-
-add_executable(
     two_sum_test
     src/1-two-sum/two-sum.test.cc
 )
+add_executable(
+    palindrome_number
+    src/9-palindrome-number/palindrome-number.test.cc
+)
+
+add_executable(
+    add_binary_test
+    src/67-add-binary/add-binary.test.cc
+)
+
+target_link_libraries(
+    palindrome_number
+    PRIVATE gtest_main
+)
+
+
 
 target_link_libraries(
     add_binary_test
