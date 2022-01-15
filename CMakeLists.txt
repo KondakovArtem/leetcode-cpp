@@ -28,9 +28,17 @@ add_executable(
 )
 
 add_executable(
+    roman_to_integer
+    src/13-roman-to-integer/roman-to-integer.test.cc
+)
+
+add_executable(
     add_binary_test
     src/67-add-binary/add-binary.test.cc
 )
+
+
+
 
 target_link_libraries(
     palindrome_number
@@ -49,12 +57,16 @@ target_link_libraries(
     PRIVATE gtest_main
 )
 
+target_link_libraries(
+    roman_to_integer
+    PRIVATE gtest_main
+)
 
 
 gtest_discover_tests(add_binary_test)
 gtest_discover_tests(two_sum_test)
 gtest_discover_tests(palindrome_number)
-
+gtest_discover_tests(roman_to_integer)
 
 # add_subdirectory(libs/googletest) # add googletest subdirectory
 
