@@ -33,6 +33,11 @@ add_executable(
 )
 
 add_executable(
+    longest_common_prefix
+    src/14-longest-common-prefix/longest-common-prefix.test.cc
+)
+
+add_executable(
     add_binary_test
     src/67-add-binary/add-binary.test.cc
 )
@@ -62,11 +67,16 @@ target_link_libraries(
     PRIVATE gtest_main
 )
 
+target_link_libraries(
+    longest_common_prefix
+    PRIVATE gtest_main
+)
 
 gtest_discover_tests(add_binary_test)
 gtest_discover_tests(two_sum_test)
 gtest_discover_tests(palindrome_number)
 gtest_discover_tests(roman_to_integer)
+gtest_discover_tests(longest_common_prefix)
 
 # add_subdirectory(libs/googletest) # add googletest subdirectory
 
